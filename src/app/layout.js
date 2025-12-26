@@ -1,10 +1,28 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Montez, Sansita_Swashed} from "next/font/google";
 import "./globals.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const sansitaSwashed = Sansita_Swashed({
+  variable: "--font-sansita-swashed",
+  subsets: ["latin"],
+});
+
+const monda = Montez({
+  variable: "--font-montez",
+  subsets: ["latin"],
+  weight: ["400"]
+})
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: ["400"],
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -20,7 +38,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} 
+        ${sansitaSwashed.variable} antialiased`}
       >
         {children}
       </body>
