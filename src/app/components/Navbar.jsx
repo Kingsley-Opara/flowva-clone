@@ -4,6 +4,7 @@ import { BsEyeglasses } from "react-icons/bs";
 import Image from 'next/image';
 import { navDetails } from '../lib/utilis';
 import { FaChevronDown } from "react-icons/fa";
+import Link from 'next/link';
 
 function Navbar() {
   return (
@@ -43,7 +44,9 @@ function Navbar() {
                     text-black p-2 w-25 rounded-full border-1 border-gray-300 px-1 cursor-pointer'>
                         <div className='w-22 bg-gray-50 shadow-xs 
                         shadow-gray-300 h-fit rounded-full py-1 font-semibold'>
-                            Login
+                            <Link className='' href={'/signin'}>
+                                Login
+                            </Link>
 
 
                         </div>
@@ -57,7 +60,10 @@ function Navbar() {
                     text-black p-2 w-24 rounded-full border-1 border-gray-300 cursor-pointer'>
                         <div className='w-22 bg-[#635b6a] 
                          h-fit rounded-full py-1 font-semibold text-white'>
-                            Sign up
+                            <Link href={'/signup'}>
+                                Sign up
+                            
+                            </Link>
 
 
                         </div>

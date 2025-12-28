@@ -34,7 +34,7 @@ function Sidebar() {
 
         </div>
 
-        <div className='flex space-x-1 bg-purple-300 cursor-pointer 
+        <div className='flex space-x-1 bg-purple-200 cursor-pointer 
         place-content-start h-12 w-[90%] ml-4 mt-2 pl-5 py-2 rounded-xl text-purple-600'>
             <MdHome className='text-purple-700 text-2xl mt-1'/>
             <p className='text-purple-600 text-lg'>Home</p>
@@ -45,7 +45,7 @@ function Sidebar() {
             return(
                 <div
                 key={item.id} 
-                className='flex space-x-3 hover:bg-purple-300 cursor-pointer
+                className='flex space-x-3 hover:bg-purple-200 cursor-pointer
                 place-content-start h-12 w-[90%] ml-4 mt-3 pl-5 py-2 rounded-xl hover:text-purple-600'>
                     <item.icon className='hover:text-purple-700 text-xl mt-1 '/>
                     <p className='hover:text-purple-600 text-lg '>{item.title}</p>

@@ -2,12 +2,15 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export default function RedirectExample() {
     const [count, setCount] = useState(0);
     const [bepp, setBepp] = useState(false);
     const [visible, setVisible] = useState(true);
     const [title, setTitle] = useState("Checking your account status.....")
+
+    const router = useRouter()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +28,7 @@ export default function RedirectExample() {
 
         // trigger animation
         setBepp(true);
-        setTimeout(() => setBepp(false), 250);
+        setTimeout(() => {setBepp(false), router.push('/dashboard')}, 250);
     }, 1000);
 
     return () => clearInterval(interval);
